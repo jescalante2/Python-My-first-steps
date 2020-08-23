@@ -1,0 +1,41 @@
+Metodos de Aperturas de Archivos:
+
+Modos de Apertura
+El modo de apertura de un archivo, está relacionado con el objetivo final que responde a la pregunta “¿para qué estamos abriendo este archivo?”. Las respuestas a esta pregunta pueden ser varias. Por ejemplo, podemos querer abrir un archivo para leerlo, para escribirlo, para leerlo y escribirlo, para crearlo si no existe y luego escribir en él, etc.
+Es necesario saber, que cada vez que abrimos un archivo estamos creando un “puntero”, el cuál se posicionará dentro del archivo en un lugar determinado (al comienzo o al final) y este puntero podrá moverse dentro de ese archivo, eligiendo su nueva posición, mediante el número de byte correspondiente.
+Este puntero, se creará -en inicio- dependiendo del modo de apertura indicado, el cuál será indicado a la función open() como una string en su segundo parámetro. Entre los modos de apertura posibles, podemos encontrar los siguientes:
+   
+Indicador
+Modo de apertura
+Ubicación del puntero
+Al inicio del archivo Al inicio del archivo Al inicio del archivo Al inicio del archivo
+Al inicio del archivo Al inicio del archivo
+r Solo lectura
+rb Solo lectura en modo binario r+ Lectura y escritura
+rb+ Lectura y escritura en modo binario
+Solo escritura.
+w Sobreescribe el archivo si existe.
+Crea el archivo si no existe.
+Solo escritura en modo binario. wb Sobreescribe el archivo si existe.
+Crea el archivo si no existe.
+                    Curso Python para Principiantes– Eugenia Bahit www.eugeniabahit.com/cursos2012 Comparte el conocimiento: Creative Commons Atribución-NoComercial-CompartirIgual 3.0
+84
+  
+   Escritura y lectura.
+w+ Sobreescribe el archivo si existe.
+Crea el archivo si no existe.
+Escritura y lectura en modo binario. wb+ Sobreescribe el archivo si existe.
+Al inicio del archivo
+Al inicio del archivo
+Si el archivo existe, al final de éste. Si el archivo no existe, al comienzo.
+Si el archivo existe, al final de éste. Si el archivo no existe, al comienzo.
+Si el archivo existe, al final de éste. Si el archivo no existe, al comienzo.
+Si el archivo existe, al final de éste. Si el archivo no existe, al comienzo.
+      a ab a+
+Crea el archivo si no existe.
+Añadido (agregar contenido). Crea el archivo si éste no existe.
+Añadido en modo binario (agregar contenido). Crea el archivo si éste no existe.
+Añadido (agregar contenido) y lectura. Crea el archivo si éste no existe.
+         Añadido (agregar contenido) y lectura en modo ab+ binario.
+Crea el archivo si éste no existe.
+  
