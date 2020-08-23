@@ -16,3 +16,12 @@ Resultado
 a es 15 a es 5
 a es -5 a es 35 a es 8
 a es 6.25 a es 6.0 a es 3
+
+
+=========
+Un ejemplo sencillo con variables y operadores aritméticos:
+=========
+monto_bruto = 175
+tasa_interes = 12
+monto_interes = monto_bruto * tasa_interes / 100 tasa_bonificacion = 5
+importe_bonificacion = monto_bruto * tasa_bonificacion / 100 monto_neto = (monto_bruto - importe_bonificacion) + monto_interes
