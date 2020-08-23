@@ -1,0 +1,18 @@
+Operadores Aritméticos
+ Entre los operadores aritméticos que Python utiliza, podemos encontrar los siguientes:
+Símbolo   Significado
++ Suma
+- Resta
+- Negación
+*         Multiplicación
+**        Exponente
+/         División
+//        División entera
+%         Módulo
+Ejemplo
+a = 10 + 5 a = 12 - 7 a = -5 a=7* 5
+a = 2 ** 3 a = 12.5 / 2 a = 12.5 / 2 a = 27 % 4
+Resultado
+a es 15 a es 5
+a es -5 a es 35 a es 8
+a es 6.25 a es 6.0 a es 3
