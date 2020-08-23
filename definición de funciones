@@ -1,0 +1,20 @@
+Definicion de Funciones:
+
+En Python, la definición de funciones se realiza mediante la instrucción def más un nombre de función descriptivo -para el cuál, aplican las mismas reglas que para el nombre
+de las variables- seguido de paréntesis de apertura y cierre. Como toda estructura de control en Python, la definición de la función finaliza con dos puntos (:) y el algoritmo que la compone, irá identado con 4 espacios:
+Una función, no es ejecutada hasta tanto no sea invocada. Para invocar una función, simplemente se la llama por su nombre:
+Cuando una función, haga un retorno de datos, éstos, pueden ser asignados a una variable:
+Sobre los parámetros
+Un parámetro es un valor que la función espera recibir cuando sea llamada (invocada), a fin de ejecutar acciones en base al mismo. Una función puede esperar uno o más parámetros (que irán separados por una coma) o ninguno.
+ 
+def mi_funcion():
+# aquí el algoritmo
+def mi_funcion():
+    print "Hola Mundo"
+funcion()
+def funcion():
+return "Hola Mundo"
+frase = funcion()
+print frase
+  
+def mi_funcion(nombre, apellido): # algoritmo
