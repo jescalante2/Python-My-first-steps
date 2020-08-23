@@ -1,0 +1,26 @@
+Modulo sys:
+
+Módulo sys
+ El módulo sys es el encargado de proveer variables y funcionalidades, directamente relacionadas con el intérprete.
+Variables del módulo sys
+Entre las variables más destacadas podemos encontrar las siguientes:
+Variable Descripción
+sys.argv
+Retorna una lista con todos los argumentos pasados por línea de comandos. Al ejecutar:
+python modulo.py arg1 arg2
+sys.arg retornará una lista: ['modulo.py', 'arg1', 'arg2']
+sys.executable sys.maxint sys.platform sys.version
+Retorna el path absoluto del binario ejecutable del intérprete de Python Retorna el número positivo entero mayor, soportado por Python Retorna la plataforma sobre la cuál se está ejecutando el intérprete Retorna el número de versión de Python con información adicional
+        Métodos del módulo sys
+Entre los métodos más destacados del módulo sys, podemos encontrar los siguientes:
+Método
+sys.exit() sys.getdefaultencoding()
+Descripción
+Forzar la salida del intérprete
+Retorna la codificación de caracteres por defecto
+  
+Sys.getfilesystemencoding()
+Retorna la codificación de caracteres que se utiliza para convertir los nombres de archivos unicode en nombres de archivos del sistema
+Retorna el tamaño del objeto pasado como parámetro. Sys.getsizeof(object[, default]) El segundo argumento (opcional) es retornado cuando
+el objeto no devuelve nada.
+   
