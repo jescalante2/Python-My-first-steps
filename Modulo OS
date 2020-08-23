@@ -1,0 +1,87 @@
+Módulo de sistema:
+
+Entre los módulos de sistema que Python nos provee a través de su librería estándar, podemos destacar tres: os, sys, y subprocess. Haremos una breve reseña de cada uno de ellos, a continuación.
+Módulo os
+El módulo os nos permite acceder a funcionalidades dependientes del Sistema Operativo. Sobre todo, aquellas que nos refieren información sobre el entorno del mismo y nos permiten manipular la estructura de directorios (para leer y escribir archivos, ver capítulo 9). Referencia oficial: http://docs.python.org/library/os.html
+Archivos y directorios
+El módulo os nos provee de varios métodos para trabajar de forma portable con las funcionalidades del sistema operativo. Veremos a continuación, los métodos más destacados de este módulo.
+    
+Descripción:
+
+Saber si se puede acceder a un archivo o directorio 
+os.access(path, modo_de_acceso)
+
+Conocer el directorio actual:
+os.getcwd() 
+
+Cambiar de directorio de trabajo
+os.chdir(nuevo_path)
+
+Cambiar al directorio de trabajo raíz
+os.chroot()
+
+Cambiar los permisos de un archivo o directorio 
+os.chmod(path, permisos)
+
+Cambiar el propietario de un archivo o directorio 
+
+Crear un directorio
+os.mkdir(path[, modo])
+
+Crear directorios recursivamente
+os.mkdirs(path[, modo])
+
+Eliminar un archivo
+os.remove(path)
+
+Eliminar un directorio
+os.rmdir(path)
+
+Eliminar directorios recursivamente 
+os.removedirs(path)
+
+Renombrar un archivo
+os.rename(actual, nuevo)
+
+Crear un enlace simbólico
+os.symlink(path, nombre_destino)
+
+Resumen:
+os.access(path, modo_de_acceso) 
+os.getcwd() 
+os.chdir(nuevo_path) 
+os.chroot()
+os.chmod(path, permisos) 
+os.chown(path, permisos) 
+os.mkdir(path[, modo]) 
+os.mkdirs(path[, modo]) 
+os.remove(path)
+os.rmdir(path) 
+os.removedirs(path) 
+os.rename(actual, nuevo) 
+os.symlink(path, nombre_destino)
+                          
+Para ver al módulo os trabajando con funcionalidades del sistema de archivos y directorios, ejecutar python os_examples de la carpeta sources de este capítulo.
+ 
+  
+El módulo os y las variables de entorno
+El módulo os también nos provee de un diccionario con las variables de entorno relativas al sistema. Se trata del diccionario environ:
+os.path
+El módulo os también nos provee del submódulo path (os.path) el cual nos permite acceder a ciertas funcionalidades relacionadas con los nombres de las rutas de archivos y directorios. Entre ellas, las más destacadas se describen en la siguiente tabla:
+import os
+for variable, valor in os.environ.iteritems(): print "%s: %s" % (variable, valor)
+Descripción
+Ruta absoluta
+Directorio base
+Saber si un directorio existe
+Conocer último acceso a un directorio Conocer tamaño del directorio
+Saber si una ruta es:
+Una ruta absoluta Un archivo
+Un directorio
+Un enlace simbólico Un punto de montaje
+
+Método
+os.path.abspath(path) os.path.basename(path) os.path.exists(path) os.path.getatime(path) os.path.getsize(path)
+os.path.isabs(path) os.path.isfile(path) os.path.isdir(path) os.path.islink(path) os.path.ismount(path)
+                      
+Para conocer más sobre os.path, visitar la documentación oficial en http://docs.python.org/library/os.path.html
