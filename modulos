@@ -1,0 +1,60 @@
+Modulos:
+En Python, cada uno de nuestros archivos .py se denominan módulos. Estos módulos, a la vez, pueden formar parte de paquetes. Un paquete, es una carpeta que contiene archivos .py. Pero, para que una carpeta pueda ser considerada un paquete, debe contener un archivo de inicio llamado __init__.py. Este archivo, no necesita contener ninguna instrucción. De hecho, puede estar completamente vacío.
+Los paquetes, a la vez, también pueden contener otros sub-paquetes:
+Y los módulos, no necesariamente, deben pertenecer a un paquete:
+ 
+.
+└── paquete
+├── __init__.py
+├── modulo1.py ├── modulo2.py └── modulo3.py
+.
+└── paquete
+├── __init__.py
+├── modulo1.py └── subpaquete
+├── __init__.py ├── modulo1.py └── modulo2.py
+.
+├── modulo1.py └── paquete
+├── __init__.py ├── modulo1.py └── subpaquete
+├── __init__.py ├── modulo1.py └── modulo2.py
+ Importando módulos enteros
+El contenido de cada módulo, podrá ser utilizado a la vez, por otros módulos. Para ello, es necesario importar los módulos que se quieran utilizar. Para importar un módulo, se utiliza la instrucción import, seguida del nombre del paquete (si aplica) más el nombre del módulo (sin el .py) que se desee importar.
+ 
+# -*- coding: utf-8 *-*
+import modulo # importar un módulo que no pertenece a un paquete
+import paquete.modulo1 # importar un módulo que está dentro de un paquete import paquete.subpaquete.modulo1
+  Curso Python para Principiantes– Eugenia Bahit www.eugeniabahit.com/cursos2012 Comparte el conocimiento: Creative Commons Atribución-NoComercial-CompartirIgual 3.0
+34
+  
+La instrucción import seguida de nombre_del_paquete.nombre_del_modulo, nos permitirá hacer uso de todo el código que dicho módulo contenga.
+Namespaces
+Para acceder (desde el módulo donde se realizó la importación), a cualquier elemento del módulo importado, se realiza mediante el namespace, seguido de un punto (.) y el nombre del elemento que se desee obtener. En Python, un namespace, es el nombre que se ha indicado luego de la palabra import, es decir la ruta (namespace) del módulo:
+Alias
+Es posible también, abreviar los namespaces mediante un “alias”. Para ello, durante la importación, se asigna la palabra clave as seguida del alias con el cuál nos referiremos en el futuro a ese namespace importado:
+Luego, para acceder a cualquier elemento de los módulos importados, el namespace utilizado será el alias indicado durante la importación:
+Importar módulos sin utilizar namespaces
+En Python, es posible también, importar de un módulo solo los elementos que se desee utilizar. Para ello se utiliza la instrucción from seguida del namespace, más la instrucción import seguida del elemento que se desee importar:
+   Python tiene sus propios módulos, los cuales forman parte de su librería de módulos estándar, que también pueden ser importados.
+      print modulo.CONSTANTE_1
+print paquete.modulo1.CONSTANTE_1
+print paquete.subpaquete.modulo1.CONSTANTE_1
+    import modulo as m
+import paquete.modulo1 as pm
+import paquete.subpaquete.modulo1 as psm
+    print m.CONSTANTE _1 print pm.CONSTANTE _1 print psm.CONSTANTE_1
+  from paquete.modulo1 import CONSTANTE_1
+Curso Python para Principiantes– Eugenia Bahit www.eugeniabahit.com/cursos2012 Comparte el conocimiento: Creative Commons Atribución-NoComercial-CompartirIgual 3.0
+35
+     
+En este caso, se accederá directamente al elemento, sin recurrir a su namespace:
+ print CONSTANTE_1
+Es posible también, importar más de un elemento en la misma instrucción. Para ello, cada
+elemento irá separado por una coma (,) y un espacio en blanco:
+from paquete.modulo1 import CONSTANTE_1, CONSTANTE_2
+Pero ¿qué sucede si los elementos importados desde módulos diferentes tienen los mismos nombres? En estos casos, habrá que prevenir fallos, utilizando alias para los elementos:
+   
+from paquete.modulo1 import CONSTANTE_1 as C1, CONSTANTE_2 as C2
+from paquete.subpaquete.modulo1 import CONSTANTE_1 as CS1, CONSTANTE_2 as CS2
+print C1
+print C2
+print CS1
+print CS2
