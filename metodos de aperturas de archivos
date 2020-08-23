@@ -18,8 +18,7 @@ w Sobreescribe el archivo si existe.
 Crea el archivo si no existe.
 Solo escritura en modo binario. wb Sobreescribe el archivo si existe.
 Crea el archivo si no existe.
-                    Curso Python para Principiantes– Eugenia Bahit www.eugeniabahit.com/cursos2012 Comparte el conocimiento: Creative Commons Atribución-NoComercial-CompartirIgual 3.0
-84
+                 
   
    Escritura y lectura.
 w+ Sobreescribe el archivo si existe.
