@@ -1,0 +1,77 @@
+Operadores Logicos:
+
+Las estructuras de control condicionales, son aquellas que nos permiten evaluar si una o más condiciones se cumplen, para decir qué acción vamos a ejecutar. La evaluación de condiciones, solo puede arrojar 1 de 2 resultados: verdadero o falso (True o False).
+En la vida diaria, actuamos de acuerdo a la evaluación de condiciones, de manera mucho más frecuente de lo que en realidad creemos: Si el semáforo está en verde, cruzar la calle. Sino, esperar a que el semáforo se ponga en verde. A veces, también evaluamos más de una condición para ejecutar una determinada acción: Si llega la factura de la luz y tengo dinero, pagar la boleta.
+Para describir la evaluación a realizar sobre una condición, se utilizan operadores relacionales (o de comparación):
+         OPERADORES RELACIONALES (DE COMPARACIÓN)
+----------------------------------------------------------
+ Símbolo   Significado
+==        Igual que
+!=        Distinto que
+<         Menor que
+>         Mayor que
+<=        Menor o igual que
+>=        Mayor o igual que
+Ejemplo
+5 == 7
+rojo != verde
+8 < 12
+12 > 7
+12 <= 12
+4 >= 5
+Resultado
+Falso
+Verdadero
+Verdadero
+Falso
+Verdadero
+Falso
+ Y para evaluar más de una condición simultáneamente, se utilizan operadores lógicos:
+ OPERADORES LÓGICOS
+----------------------------------------------------------
+Operador
+and (y)
+or (o)
+xor
+(o excluyente)
+Ejemplo
+5 == 7 and 7 < 12
+9 < 12 and 12 > 7
+9 < 12 and 12 > 15
+12 == 12 or 15 < 7
+7 > 5 or 9 < 12
+4 == 4 xor 9 > 3
+4 == 4 xor 9 < 3
+Resultado*
+0y 0 1y 1 1y 0 1o 0 1o 1 1o 1 1o 0
+Falso
+Verdadero
+Falso
+Verdadero
+Verdadero
+Falso
+Verdadero
+ (*) 1 indica resultado verdadero de la condición, mientras que 0, indica falso.
+Curso Python para Principiantes– Eugenia Bahit www.eugeniabahit.com/cursos2012 Comparte el conocimiento: Creative Commons Atribución-NoComercial-CompartirIgual 3.0
+29
+    
+Las estructuras de control de flujo condicionales, se definen mediante el uso de tres palabras claves reservadas, del lenguaje: if (si), elif (sino, si) y else (sino).
+Veamos algunos ejemplos:
+Si semáforo esta en verde, cruzar la calle. Sino, esperar.
+ 
+if semaforo == verde:
+    print "Cruzar la calle"
+else:
+    print "Esperar"
+Si gasto hasta $100, pago con dinero en efectivo. Sino, si gasto más de $100 pero menos de $300, pago con tarjeta de débito. Sino, pago con tarjeta de crédito.
+if compra <= 100:
+    print "Pago en efectivo"
+elif compra > 100 and compra < 300:
+    print "Pago con tarjeta de débito"
+else:
+    print "Pago con tarjeta de crédito"
+ Si la compra es mayor a $100, obtengo un descuento del 10%
+importe_a_pagar = total_compra
+if total_compra > 100:
+tasa_descuento = 10
+importe_descuento = total_compra * tasa_descuento / 100 importe_a_pagar = total_compra – importe_descuento
